@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import EarningsChart from "../EarningsChart/EarningsChart";
 import CalendarCard from "../CalendarCard/CalendarCard";
+import InstituteTable from "../InstituteTable/InstituteTable";
+import StudentPieChart from "../StudentPieChart/StudentPieChart";
 
 const DashboardHome = () => {
   const stats = [
@@ -41,7 +43,6 @@ const DashboardHome = () => {
   ];
   return (
     <div>
-      {/* header  */}
       <div className="space-y-0.5">
         <h2 className="text-3xl font-bold">Dashboard Overview</h2>
         <p className="text-gray-400">
@@ -49,10 +50,7 @@ const DashboardHome = () => {
         </p>
       </div>
 
-      <div
-        className="mt-8
-      "
-      >
+      <div className="mt-8">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {stats.map((stat, i) => (
             <div key={i} className="card shadow-md gap-y-4 p-6">
@@ -71,9 +69,16 @@ const DashboardHome = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start justify-center gap-5 mt-8">
+      <div className="flex flex-col lg:flex-row items-start justify-center lg:justify-start gap-5 mt-8">
         <EarningsChart />
         <CalendarCard />
+      </div>
+
+      <div className="flex flex-col xl:flex-row items-start justify-center lg:justify-start gap-5 mt-8">
+        <div className="w-full h-full lg:w-5xl">
+          <InstituteTable />
+        </div>
+        <StudentPieChart />
       </div>
     </div>
   );

@@ -86,7 +86,7 @@ const DashboardLayout = () => {
               <TextAlignJustify className="size-5" />
             </label>
             <div className="px-4 flex justify-between items-center w-full gap-6">
-              <div>
+              <div className="w-full">
                 <label className="input">
                   <svg
                     className="h-[1em] opacity-50"
