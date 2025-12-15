@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Logo from "../../../assets/Home2Logo.svg";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { HiMenuAlt3, HiX } from "react-icons/hi"; // Added for mobile menu icons
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,14 +22,14 @@ const Navbar = () => {
     <nav className="relative w-full bg-white">
       <div className="flex items-center justify-between px-4 md:px-8 py-6 max-w-11/12 mx-auto">
         {/* Logo Section */}
-        <div className="flex items-center gap-2 z-50">
+        <Link to={"/"} className="flex items-center gap-2 z-50">
           <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shrink-0">
             <img src={Logo} alt="Logo" className="w-5 h-5" />
           </div>
           <span className="text-xl md:text-2xl font-bold text-[#034833] whitespace-nowrap">
             Supper Heroes
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden xl:flex items-center gap-6 xl:gap-8 text-sm font-medium">
