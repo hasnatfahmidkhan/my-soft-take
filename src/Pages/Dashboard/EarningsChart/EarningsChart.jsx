@@ -25,11 +25,11 @@ const EarningsChart = () => {
     { month: "Dec", income: 160000, expense: 145000 },
   ];
   return (
-    <div className="card bg-base-100 shadow-sm pl-3 py-5 pr-8">
+    <div className="card bg-base-100 w-full lg:w-2/3 shadow-sm pl-3 py-5 pr-8">
       <div className="card-body">
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-medium">Earnings</h3>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">
             <div className="flex items-center gap-2">
               <span className="w-5 h-5 rounded-full bg-blue-500"></span>
               <span className="text-sm font-medium">Income</span>
@@ -60,7 +60,7 @@ const EarningsChart = () => {
               tickLine={false}
             />
             <Tooltip />
-            
+
             <Line
               type="monotone"
               dataKey="income"

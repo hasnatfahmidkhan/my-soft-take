@@ -6,7 +6,7 @@ import {
   Users,
 } from "lucide-react";
 import EarningsChart from "../EarningsChart/EarningsChart";
-import Calendar from "../Calendar/Calendar";
+import CalendarCard from "../CalendarCard/CalendarCard";
 
 const DashboardHome = () => {
   const stats = [
@@ -71,9 +71,9 @@ const DashboardHome = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
+      <div className="flex flex-col lg:flex-row items-start justify-center gap-5 mt-8">
         <EarningsChart />
-        <Calendar />
+        <CalendarCard />
       </div>
     </div>
   );

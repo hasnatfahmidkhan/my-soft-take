@@ -14,3 +14,35 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.react-calendar-custom {
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: inherit;
+}
+
+.react-calendar__navigation button {
+  color: inherit;
+  min-width: 44px;
+  background: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.react-calendar__tile {
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 40px;
+  border-radius: 50%;
+  background: #87d788;
+  color: #000;
+}
+.react-calendar__tile--active {
+  background: #86d788 !important;
+  border-radius: 50%;
+  color: white;
+}
