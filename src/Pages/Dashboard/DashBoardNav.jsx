@@ -16,8 +16,8 @@ const DashBoardNav = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm px-10">
-      <div className="navbar-start w-fit">
+    <div className="navbar bg-base-100 shadow-sm md:px-10">
+      <div className="navbar-start w-full lg:w-fit">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -44,7 +44,7 @@ const DashBoardNav = () => {
           </ul>
         </div>
         <Link to={"/"} className="cursor-pointer">
-          <img src={Logo} className="w-28" />
+          <img src={Logo} className="w-20 md:w-28" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex flex-1 justify-center">
