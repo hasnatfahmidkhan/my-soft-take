@@ -5,7 +5,7 @@ const DashBoardNav = () => {
   const links = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
         <NavLink>Institutions</NavLink>
@@ -48,7 +48,9 @@ const DashBoardNav = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex flex-1 justify-center">
-        <ul className="menu menu-horizontal font-medium text-base w-full justify-evenly">{links}</ul>
+        <ul className="menu menu-horizontal font-medium text-base w-full justify-evenly">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end w-fit">
         <EllipsisVertical />
