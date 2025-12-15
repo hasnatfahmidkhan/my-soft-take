@@ -11,7 +11,6 @@ import "swiper/css/effect-fade";
 // import required modules
 import {
   FreeMode,
-  Navigation,
   Thumbs,
   EffectFade,
   Autoplay,

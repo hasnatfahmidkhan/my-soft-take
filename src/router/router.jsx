@@ -3,6 +3,7 @@ import RootLayout from "../Layout/RootLayout/RootLayout";
 import Home1 from "../Pages/Home/Home1";
 import Dashboard from "../Layout/DashboardLayout/DashboardLayout";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import Home2 from "../Pages/Home2/Home2";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         Component: DashboardHome,
       },
     ],
+  },
+  {
+    path: "/home2",
+    Component: Home2,
   },
 ]);
 

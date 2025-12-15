@@ -1,0 +1,202 @@
+/* Mini Lines Animation (top left corner) - TranslateX effect */
+.mini-line-animate {
+  animation: slideLineX 1.5s ease-in-out infinite;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Continuous horizontal slide for mini lines */
+@keyframes slideLineX {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-30px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading Text Pulse */
+.loading-text-pulse {
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+/* Bus - Stays in place with subtle vibration */
+.bus-bounce-run {
+  animation: busStayVibrate 0.15s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  position: relative;
+  z-index: 10;
+}
+
+/* Subtle vibration while bus stays in place */
+@keyframes busStayVibrate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-1px) rotate(-0.3deg);
+  }
+  75% {
+    transform: translateY(1px) rotate(0.3deg);
+  }
+}
+
+/* Road Line - Slides underneath the bus */
+.road-line {
+  position: relative;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  animation: roadSlide 3s linear infinite;
+}
+
+/* Road sliding effect - translateX */
+@keyframes roadSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+/* Road Markings Moving Animation - Continuous slide */
+.road-mark-move {
+  position: absolute;
+  height: 20px;
+  width: auto;
+  opacity: 0.8;
+  animation: moveRoadMarksSlide 2.5s linear infinite;
+}
+
+/* Road markings slide from right to left using translateX */
+@keyframes moveRoadMarksSlide {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-600px);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bus-bounce-run {
+    max-width: 120px;
+  }
+
+  .road-mark-move {
+    height: 15px;
+  }
+
+  @keyframes moveRoadMarksSlide {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideLineX {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-20px);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bus-bounce-run {
+    max-width: 80px;
+  }
+
+  .road-mark-move {
+    height: 12px;
+  }
+
+  @keyframes moveRoadMarksSlide {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(-300px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideLineX {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-15px);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
