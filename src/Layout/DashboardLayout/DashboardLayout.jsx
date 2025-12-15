@@ -15,7 +15,7 @@ import {
   Wallet,
 } from "lucide-react";
 import SVG from "../../assets/SVG.png";
-import { NavLink } from "react-router";
+import { NavLink, Outlet } from "react-router";
 const DashboardLayout = () => {
   const links = [
     {
@@ -121,7 +121,9 @@ const DashboardLayout = () => {
             </div>
           </nav>
           {/* Page content here */}
-          <div className="p-4">Page Content</div>
+          <div className="p-4">
+            <Outlet />
+          </div>
         </div>
 
         <div className="drawer-side is-drawer-close:overflow-visible">
