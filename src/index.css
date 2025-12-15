@@ -7,3 +7,10 @@ html,
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.bg-hero {
+  background-image: url("./assets/Frame-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

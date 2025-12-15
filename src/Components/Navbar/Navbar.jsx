@@ -1,27 +1,30 @@
 import { NavLink } from "react-router";
 import Container from "../Container/Container";
 import { TextAlignJustify } from "lucide-react";
-
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink>Home 1</NavLink>
+        <NavLink to={"/"}>Home 1</NavLink>
       </li>
       <li>
-        <NavLink>Home 2</NavLink>
+        <NavLink to={"home2"}>Home 2</NavLink>
       </li>
       <li>
-        <NavLink>Dashboard</NavLink>
+        <NavLink to={"/dashboard"}>Dashboard</NavLink>
       </li>
     </>
   );
   return (
-    <div className="">
-      <Container className={"navbar"}>
+    <>
+      <Container className={"navbar text-white"}>
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost  lg:hidden"
+            >
               <TextAlignJustify />
             </div>
             <ul
@@ -36,10 +39,10 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-end  hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal gap-3 font-medium">{links}</ul>
         </div>
       </Container>
-    </div>
+    </>
   );
 };
 
