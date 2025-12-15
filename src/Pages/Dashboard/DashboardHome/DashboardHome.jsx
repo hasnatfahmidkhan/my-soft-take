@@ -5,6 +5,8 @@ import {
   Landmark,
   Users,
 } from "lucide-react";
+import EarningsChart from "../EarningsChart/EarningsChart";
+import Calendar from "../Calendar/Calendar";
 
 const DashboardHome = () => {
   const stats = [
@@ -51,12 +53,12 @@ const DashboardHome = () => {
         className="mt-8
       "
       >
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {stats.map((stat, i) => (
             <div key={i} className="card shadow-md gap-y-4 p-6">
               <div className="stat-title text-base capitalize text-black font-medium flex items-center justify-between">
                 {stat.label}
-                <stat.icon className="text-gray-400 size-5"/>
+                <stat.icon className="text-gray-400 size-5" />
               </div>
               <div>
                 <div className="stat-value">{stat.count}</div>
@@ -67,6 +69,11 @@ const DashboardHome = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
+        <EarningsChart />
+        <Calendar />
       </div>
     </div>
   );
